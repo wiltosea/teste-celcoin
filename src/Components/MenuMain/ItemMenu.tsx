@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+// import { Link } from 'react-router-dom';
 import {ItemMenuLi} from './styles'
 
 interface ItemMenuProps {
@@ -10,9 +11,10 @@ interface ItemMenuProps {
 
 export const ItemMenu = ({className, icon, title, url}:ItemMenuProps) => {
   return (
-    <ItemMenuLi>
-      <i className={icon} />
-      <Link to={url} className={className}>{title}</Link>
+    <ItemMenuLi to={url} className={className}>
+      <li>
+        <Icon icon={icon} width={18}/><span>{title}</span>
+      </li>
     </ItemMenuLi>
   );
 };

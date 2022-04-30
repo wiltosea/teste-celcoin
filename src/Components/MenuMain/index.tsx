@@ -13,25 +13,25 @@ export const MenuMain = () => {
           <MenuList>
             <ItemMenu
               className={splitLocation[1] === "" ? "active" : ""}
-              icon="fa fa-home"
+              icon="ant-design:home-outlined"
               url="/"
               title="Home"
             />
             <ItemMenu
               className={splitLocation[1] === "pacientes" ? "active" : ""}
-              icon="fa fa-user-md"
+              icon="gridicons:product-downloadable"
               url="/pacientes"
               title="Pacientes"
             />
             <ItemMenu
               className={splitLocation[1] === "testes" ? "active" : ""}
-              icon="fa fa-user-md"
+              icon="gridicons:product-downloadable"
               url="/testes"
               title="Testes"
             />
             <ItemMenu
               className={splitLocation[1] === "configuracoes" ? "active" : ""}
-              icon="fa fa-user-md"
+              icon="gridicons:product-downloadable"
               url="/configuracoes"
               title="Configurações"
             />
