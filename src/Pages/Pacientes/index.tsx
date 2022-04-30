@@ -1,9 +1,11 @@
+import {Container} from './styles';
+
 const Pacientes = () => {
   return (
-    <div>
+    <Container>
       <h1>Pacientes</h1>
-    </div>
+    </Container>
   );
-};
+}
 
 export default Pacientes;
