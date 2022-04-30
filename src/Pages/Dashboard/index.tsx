@@ -1,14 +1,14 @@
-import {Container, HeaderContainer, SearchBox} from './styles';
-import { Icon } from '@iconify/react';
+import { Search } from '../../Components/SearchBox';
+import { UserMenu } from '../../Components/UserMenu';
+import {Container, HeaderContainer } from './styles';
 
 const Dashboard = () => {
   return (
     <Container>
       <HeaderContainer>
-        <SearchBox>
-          <Icon icon="ic-baseline-search" width={20}/>
-          <input type="text" placeholder="Busca..." />
-        </SearchBox>
+        <Search />
+        <UserMenu />
+
       </HeaderContainer>
     </Container>
   );
