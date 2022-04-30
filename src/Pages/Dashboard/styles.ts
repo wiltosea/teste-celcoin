@@ -11,6 +11,7 @@ export const Container = styled.div`
   padding: 0px;
   margin-top: 32px;
   border-radius: 30px;
+  margin-right: 40px;
 `;
 
 export const HeaderContainer = styled.div`
@@ -22,6 +23,7 @@ justify-content: space-between;
 align-items: center;
 height: 88px;
 border-radius: 30px 30px 0px 0px;
+
 div {
   display: flex;
   flex-direction: row;
@@ -29,3 +31,8 @@ div {
 
 }
 `;
+
+export const ContentContainer = styled.div`
+  margin: 2rem;
+  width: calc(100% - 80px);
+  `;

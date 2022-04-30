@@ -1,3 +1,5 @@
+/* CSS do Ant Design */
+@import '~antd/dist/antd.css';
 :root {
   --red: #EF0C35;
   --blue: #00A8FF;
