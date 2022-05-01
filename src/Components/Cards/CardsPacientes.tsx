@@ -5,15 +5,15 @@ import { Indicador, StyledCard } from "./styles";
 
 const {Title} = Typography;
 
-interface CardProps {
+interface CardsPacientesProps {
   icon:string, 
   title: string,
   desc: string,
-  kpi: string,
+  kpi?: string,
   iconColor?: string,
 }
 
-export const CardsPacientes = ({icon, title, desc, kpi, iconColor }:CardProps) => {
+export const CardsPacientes = ({icon, title, desc, kpi, iconColor }:CardsPacientesProps) => {
   return (
     <StyledCard title={<Icon icon={icon} width={40} color={iconColor}/> } extra={<Indicador>{kpi}</Indicador> } >
       <Title level={2}>{title}</Title>
@@ -21,3 +21,4 @@ export const CardsPacientes = ({icon, title, desc, kpi, iconColor }:CardProps) =
     </StyledCard>
   );
   }
+
