@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import {Typography} from 'antd'
+import {Tooltip, Typography} from 'antd'
 import { Indicador, StyledCard } from "./styles";
 
 
@@ -11,14 +11,24 @@ interface CardsPacientesProps {
   desc: string,
   kpi?: string,
   iconColor?: string,
+  titleToolTip: string,
+  valueToolTip: string | number,
 }
 
-export const CardsPacientes = ({icon, title, desc, kpi, iconColor }:CardsPacientesProps) => {
+export const CardsPacientes = ({icon, title, desc, kpi, iconColor, titleToolTip,valueToolTip }:CardsPacientesProps) => {
+  
   return (
-    <StyledCard title={<Icon icon={icon} width={40} color={iconColor}/> } extra={<Indicador>{kpi}</Indicador> } >
-      <Title level={2}>{title}</Title>
-      <p className="descricao">{desc}</p>
-    </StyledCard>
+    <Tooltip placement="topLeft" title={() => {
+      return <div>
+          <p>{titleToolTip}</p>
+          <span>{valueToolTip}</span>
+      </div>
+    }}>
+      <StyledCard title={<Icon icon={icon} width={40} color={iconColor}/> } extra={<Indicador>{kpi}</Indicador> } >
+        <Title level={2}>{title}</Title>
+        <p className="descricao">{desc}</p>
+      </StyledCard>
+    </Tooltip>
   );
   }
 
