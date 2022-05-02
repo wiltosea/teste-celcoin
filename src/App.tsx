@@ -1,8 +1,9 @@
+import GlobalStyle from './styles/global';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Aside } from './Components/Aside';
 import { Layout } from './Components/PageContainer/Layout';
-import './Global.css';
+// import './Global.css';
 
 
 const Dashboard = lazy(() => import('./Pages/Dashboard/'));
@@ -10,6 +11,7 @@ const Pacientes = lazy(() => import('./Pages/Pacientes/'));
 
 const App = () => (
   <>
+      <GlobalStyle />
     <main>
       <Layout>
         <Router>

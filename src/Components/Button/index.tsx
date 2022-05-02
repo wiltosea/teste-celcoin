@@ -7,9 +7,7 @@ interface ButtonProps {
   type?: string,
 }
 
-
 export const Button = ({href, textTitle, typeButton}:ButtonProps) => {
-        console.log(typeButton);
   return (<>
         <StyledButton href={href} type={
         typeButton==='primary'?'primary':'ghost'}>{textTitle}</StyledButton>
