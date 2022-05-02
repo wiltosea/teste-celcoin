@@ -1,11 +1,12 @@
 import { Search } from '../../Components/SearchBox';
 import { UserMenu } from '../../Components/UserMenu';
-import {Container, ContainerMaisRealizados, ContentContainer, ContentContainerHistorico, HeaderContainer } from './styles';
+import {Container, ContainerMaisRealizados, ContentContainer, ContentContainerHistorico, HeaderContainer, Main } from './styles';
 import {Row, Col, Typography } from 'antd'
 import { CardsPacientes } from '../../Components/Cards/CardsPacientes';
 import { CardsHistorico } from '../../Components/Cards/CardsHistorico';
 import { TesteMaisRealizado } from '../../Components/Cards/CardMaisRealizado';
 import { CardsAtualizacoesImportantes } from '../../Components/Cards/CardsAtualizacoesImportantes';
+import Button from '../../Components/Button';
 const {Title} = Typography;
 
 const Dashboard = () => {
@@ -15,7 +16,6 @@ const Dashboard = () => {
         <Search />
         <UserMenu />
       </HeaderContainer>
-
       <ContentContainer>
         <Title level={4}>Informações gerais</Title>
           <Row gutter={16}>
@@ -23,20 +23,20 @@ const Dashboard = () => {
               <CardsPacientes icon={"ic:baseline-person-outline"} title='26' desc='Pacientes ativos' kpi='+30%' titleToolTip={'Pacientes totais'} valueToolTip='268'/>
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='306' desc='Testes realizados' kpi='-10%'titleToolTip={'Pacientes totais'} valueToolTip='268'/>
+              <CardsPacientes icon={"ic:baseline-person-outline"} title='306' desc='Testes realizados' kpi='-10%'titleToolTip={'Testes totais'} valueToolTip='1.265'/>
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='139' desc='Testes concluídos' kpi='+30%'titleToolTip={'Pacientes totais'} valueToolTip='268'/>
+              <CardsPacientes icon={"ic:baseline-person-outline"} title='139' desc='Testes concluídos' kpi='+30%'titleToolTip={'Testes totais concluídos'} valueToolTip='10.550'/>
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='11' desc='Testes cancelados' kpi='-3%'titleToolTip={'Pacientes totais'} valueToolTip='268'/>
+              <CardsPacientes icon={"ic:baseline-person-outline"} title='11' desc='Testes cancelados' kpi='-3%'titleToolTip={'Testes totais cancelados'} valueToolTip='618' negative={true}/>
             </Col>
           </Row>
       </ContentContainer>
       <ContentContainer>
       <Row gutter={16}>
         <Col span={18}>
-            <Title level={4}>Histórico de atendimentos</Title>
+            <Title level={4}>Histórico de atendimentos <Button href="/pacientes" textTitle="Ver todos" typeButton="primary"/></Title>
             <ContentContainerHistorico>
               <Row gutter={10}>
                 <Col span={8}>
@@ -81,7 +81,6 @@ const Dashboard = () => {
           </ContainerMaisRealizados>
         </Col>
       </Row>
-
 
     </ContentContainer>
     <ContentContainer>

@@ -45,6 +45,7 @@ export const UserContextMenu = styled.div`
   padding: 16px;
   border-radius: 50px;
   margin-right: 16px;
+  height:56px;
   .user-name {
     font-weight: 700;
   }

@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react";
-import {Tooltip, Typography} from 'antd'
+import { Typography} from 'antd'
+import { useState } from "react";
+import ReactTooltip from "react-tooltip";
 import { Indicador, StyledCard } from "./styles";
 
 
@@ -13,22 +15,33 @@ interface CardsPacientesProps {
   iconColor?: string,
   titleToolTip: string,
   valueToolTip: string | number,
+  negative?: boolean,
 }
 
-export const CardsPacientes = ({icon, title, desc, kpi, iconColor, titleToolTip,valueToolTip }:CardsPacientesProps) => {
+export const CardsPacientes = ({icon, title, desc, kpi, iconColor, titleToolTip,valueToolTip, negative }:CardsPacientesProps) => {
+  
+
+  const [show, setShow] = useState(false);
   
   return (
-    <Tooltip placement="topLeft" title={() => {
-      return <div>
-          <p>{titleToolTip}</p>
-          <span>{valueToolTip}</span>
-      </div>
-    }}>
-      <StyledCard title={<Icon icon={icon} width={40} color={iconColor}/> } extra={<Indicador>{kpi}</Indicador> } >
-        <Title level={2}>{title}</Title>
-        <p className="descricao">{desc}</p>
+    <div data-tip={`${titleToolTip}<br>${valueToolTip}`}>
+      <StyledCard
+      title={<Icon icon={icon} width={40} color={iconColor}/> }
+      extra={<Indicador>{kpi}</Indicador> }
+      >
+        
+        <ReactTooltip
+          effect="solid"
+          multiline={true}
+          offset={{top: -45, left: -75}}
+          arrowColor={'transparent'}
+          className={`tooltip ${negative ? "negative" : ""}`}
+          />
+        
+        <p className="card-title">{title}</p>
+        <p className="description">{desc}</p>
       </StyledCard>
-    </Tooltip>
+      </div>
   );
   }
 

@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  height: calc(100vh - 64px);
+  /* height: calc(100vh - 64px); */
   padding: 0px;
   margin-top: 32px;
   border-radius: 30px;
@@ -60,3 +60,8 @@ export const ContainerMaisRealizados = styled(ContentContainer)`
     box-shadow: 0px 8px 26px rgba(71, 87, 122, 0.3);
   }
 `
+
+export const Main = styled.div`
+  height: calc(100vh - 150px);
+  overflow: hidden scroll ;
+`;

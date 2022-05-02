@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Card } from 'antd';
 import { CardProps } from 'antd/lib/card';
 
+
 export const StyledCard: typeof Card = styled(Card)<CardProps>`
   /* margin-bottom: 24px; */
   border-radius: 6px;
@@ -9,8 +10,56 @@ export const StyledCard: typeof Card = styled(Card)<CardProps>`
   background-color: var(--white);
   box-shadow: 0px 8px 26px rgba(71, 87, 122, 0.08);
   transition: box-shadow 0.3s ease-in-out;
+  .ant-card-body {
+  padding: 0 24px;
+    .card-title {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 54px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
+    .description{
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  .tooltip {
+    background: var(--white);
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    .multi-line{
+      text-align: left;
+      &:nth-child(2){
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--black);
+      }
+      &:nth-child(3){
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        color: #1CBF84;
+      }
+    }
+  }
   .ant-card-head {
     border-bottom: 0px;
+    .ant-card-head-title {
+      padding: 0px;
+    }
   }
   .descricao {
     font-size: 16px;
@@ -51,7 +100,8 @@ export const StyledCardsHistorico = styled(StyledCard)`
 `;
 
 export const StyledCardMaisRealizado = styled(StyledCard)`
-  height: 358px;
+  height: 322px;
+  border: none;
   h3{
     font-style: normal;
     font-weight: 700;
@@ -64,6 +114,7 @@ export const StyledCardMaisRealizado = styled(StyledCard)`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 20px;
   }
   .quantidade-disponivel{
     font-style: normal;
@@ -88,22 +139,27 @@ export const StyledCardMaisRealizado = styled(StyledCard)`
 
 
 export const SubTitle = styled.h4`
-  text-transform: uppercase;
+  font-weight: 800;
   font-size: 10px;
-  font-weight: 900;
-  color: #303B5B48;
-`;
-
-export const Name = styled.h3`
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
+  line-height: 14px;
   display: flex;
   align-items: center;
-  color: #303B5B;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  text-transform: uppercase;
+  color: #303B5B48;
+  font-style: normal;
+  padding: 2px 0 4px 0;
+  margin: 0;
+`;
+
+export const Name = styled.p`
+    /* font-family: 'Open Sans'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
 `;
 
 export const TextResult = styled.p`
@@ -123,6 +179,7 @@ export const StyledCardsAtualizacoesImportantes = styled.div`
   box-shadow: 0px 1px 26px rgba(71, 87, 122, 0.08);
   transition: box-shadow 0.3s ease-in-out;
   padding: 1rem 0 1rem 1rem;
+  margin-bottom: 2rem;
   .nome {
     font-style: normal;
     font-weight: 700;

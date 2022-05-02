@@ -15,7 +15,7 @@ export const MenuMain = () => {
               className={splitLocation[1] === "" ? "active" : ""}
               icon="ant-design:home-outlined"
               url="/"
-              title="Home"
+              title="Dashboard"
             />
             <ItemMenu
               className={splitLocation[1] === "pacientes" ? "active" : ""}

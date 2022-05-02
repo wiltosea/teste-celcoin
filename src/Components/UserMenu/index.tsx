@@ -1,6 +1,4 @@
 import { Container, StyledIcon, StyledIconNotification, UserContextMenu } from "./styles";
-import { Icon } from "@iconify/react";
-
 
 export const UserMenu = () => {
   return (
