@@ -1,21 +1,18 @@
-import { Search } from '../../Components/SearchBox';
-import { UserMenu } from '../../Components/UserMenu';
-import {Container, ContainerMaisRealizados, ContentContainer, ContentContainerHistorico, HeaderContainer, Main } from './styles';
+import { PageContainer } from '../../Components/PageContainer/';
+import {ContainerMaisRealizados, ContentContainer, ContentContainerHistorico } from './styles';
 import {Row, Col, Typography } from 'antd'
 import { CardsPacientes } from '../../Components/Cards/CardsPacientes';
 import { CardsHistorico } from '../../Components/Cards/CardsHistorico';
 import { TesteMaisRealizado } from '../../Components/Cards/CardMaisRealizado';
 import { CardsAtualizacoesImportantes } from '../../Components/Cards/CardsAtualizacoesImportantes';
 import Button from '../../Components/Button';
+import { HeaderContainer } from '../../Components/HeaderContainer';
 const {Title} = Typography;
 
 const Dashboard = () => {
   return (
-    <Container>
-      <HeaderContainer>
-        <Search />
-        <UserMenu />
-      </HeaderContainer>
+    <PageContainer>
+      <HeaderContainer />
       <ContentContainer>
         <Title level={4}>Informações gerais</Title>
           <Row gutter={16}>
@@ -120,7 +117,7 @@ const Dashboard = () => {
             </Col>
           </Row>
       </ContentContainer>
-    </Container>
+    </PageContainer>
   );
 }
 
