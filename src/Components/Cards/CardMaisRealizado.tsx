@@ -7,7 +7,7 @@ interface CardsTesteMaisRealizadoProps {
   tipo: string,
 }
 
-export const TesteMaisRealizado = ({nomeDoExame, disponiveis, tipo }:CardsTesteMaisRealizadoProps) => {
+export const CardTesteMaisRealizado = ({nomeDoExame, disponiveis, tipo }:CardsTesteMaisRealizadoProps) => {
 
   return (
     <StyledCardMaisRealizado

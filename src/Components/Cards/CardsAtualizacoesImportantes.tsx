@@ -6,20 +6,23 @@ interface CardsHistoricoProps {
   exame: string,
   dataRealizado: string,
   foto: string,
+  completo?: boolean,
 }
 
-export const CardsAtualizacoesImportantes = ({nome, exame, dataRealizado, foto }:CardsHistoricoProps) => {
+export const CardsAtualizacoesImportantes = ({nome, exame, dataRealizado, foto, completo }:CardsHistoricoProps) => {
 
   return (
     <StyledCardsAtualizacoesImportantes>
       <Row gutter={16}>
-        <Col span={8}>
+        <Col span={6}>
           <img alt='foto-paciente' src={foto}/>
         </Col>
-        <Col span={16}>
+        <Col span={18}>
           <SubTitle>Paciente</SubTitle>
           <span className="nome">{nome}</span>
-          <TestComplete>Completou o teste:<span>&nbsp;{exame}</span></TestComplete>
+          <TestComplete className={completo?'completo':'cancelado'}>
+            {completo?'Completou o teste: ':'Cancelou o teste: '}<span>&nbsp;{exame}</span>
+          </TestComplete>
           <SubTitle>Realizado em: {dataRealizado}</SubTitle>
           
         </Col>

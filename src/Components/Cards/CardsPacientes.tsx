@@ -5,8 +5,6 @@ import ReactTooltip from "react-tooltip";
 import { Indicador, StyledCard } from "./styles";
 
 
-const {Title} = Typography;
-
 interface CardsPacientesProps {
   icon:string, 
   title: string,
@@ -20,16 +18,15 @@ interface CardsPacientesProps {
 
 export const CardsPacientes = ({icon, title, desc, kpi, iconColor, titleToolTip,valueToolTip, negative }:CardsPacientesProps) => {
   
-
-  const [show, setShow] = useState(false);
-  
   return (
-    <div data-tip={`${titleToolTip}<br>${valueToolTip}`}>
+    
       <StyledCard
       title={<Icon icon={icon} width={40} color={iconColor}/> }
       extra={<Indicador>{kpi}</Indicador> }
+      data-tip={`${titleToolTip}<br>${valueToolTip}`}
       >
-        
+        <p className="card-title">{title}</p>
+        <p className="description">{desc}</p>
         <ReactTooltip
           effect="solid"
           multiline={true}
@@ -37,11 +34,8 @@ export const CardsPacientes = ({icon, title, desc, kpi, iconColor, titleToolTip,
           arrowColor={'transparent'}
           className={`tooltip ${negative ? "negative" : ""}`}
           />
-        
-        <p className="card-title">{title}</p>
-        <p className="description">{desc}</p>
       </StyledCard>
-      </div>
+      
   );
   }
 

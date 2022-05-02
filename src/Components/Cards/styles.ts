@@ -55,6 +55,11 @@ export const StyledCard: typeof Card = styled(Card)<CardProps>`
       }
     }
   }
+  .negative {
+    .multi-line{
+      &:nth-child(3){color: red;}
+    }
+  }
   .ant-card-head {
     border-bottom: 0px;
     .ant-card-head-title {
@@ -204,4 +209,10 @@ export const TestComplete = styled.p`
   align-items: center;
   text-transform: uppercase;
   color: #1EAC79;
+  span{
+    font-weight: 700;
+  }
+  &.cancelado {
+    color: var(--red);
+  }
 `;

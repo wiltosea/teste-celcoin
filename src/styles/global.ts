@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
         --gray: #EFF2F9;
         --lightgray: #EDF1F8;
         --white: #FFFFFF;
+        --orange: #FF6B00;
     }
 
 

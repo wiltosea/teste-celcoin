@@ -1,12 +1,15 @@
-import { PageContainer } from '../../Components/PageContainer/';
-import {ContainerMaisRealizados, ContentContainer, ContentContainerHistorico } from './styles';
+import { PageContainer } from '../../Components/Layout/PageContainer';
+import {ContentContainer} from '../../Components/Layout/ContentContainer';
+import {ContentContainerHistorico} from '../../Components/Layout/ContentContainerHistorico';
+import {ContainerMaisRealizados } from '../../Components/Layout/ContainerMaisRealizados';
 import {Row, Col, Typography } from 'antd'
 import { CardsPacientes } from '../../Components/Cards/CardsPacientes';
 import { CardsHistorico } from '../../Components/Cards/CardsHistorico';
-import { TesteMaisRealizado } from '../../Components/Cards/CardMaisRealizado';
+import { CardTesteMaisRealizado } from '../../Components/Cards/CardMaisRealizado';
 import { CardsAtualizacoesImportantes } from '../../Components/Cards/CardsAtualizacoesImportantes';
 import Button from '../../Components/Button';
 import { HeaderContainer } from '../../Components/HeaderContainer';
+
 const {Title} = Typography;
 
 const Dashboard = () => {
@@ -17,7 +20,7 @@ const Dashboard = () => {
         <Title level={4}>Informações gerais</Title>
           <Row gutter={16}>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='26' desc='Pacientes ativos' kpi='+30%' titleToolTip={'Pacientes totais'} valueToolTip='268'/>
+              <CardsPacientes icon={"ic:baseline-person-outline"} title='26' desc='Pacientes ativos' kpi='+30%' titleToolTip={'Pacientes totais'} valueToolTip='268' />
             </Col>
             <Col flex={3}>
               <CardsPacientes icon={"ic:baseline-person-outline"} title='306' desc='Testes realizados' kpi='-10%'titleToolTip={'Testes totais'} valueToolTip='1.265'/>
@@ -26,7 +29,7 @@ const Dashboard = () => {
               <CardsPacientes icon={"ic:baseline-person-outline"} title='139' desc='Testes concluídos' kpi='+30%'titleToolTip={'Testes totais concluídos'} valueToolTip='10.550'/>
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='11' desc='Testes cancelados' kpi='-3%'titleToolTip={'Testes totais cancelados'} valueToolTip='618' negative={true}/>
+              <CardsPacientes icon={"ic:baseline-person-outline"} title='11' desc='Testes cancelados' kpi='-3%'titleToolTip={'Testes totais cancelados'} valueToolTip='618'/>
             </Col>
           </Row>
       </ContentContainer>
@@ -68,7 +71,7 @@ const Dashboard = () => {
           <ContainerMaisRealizados>
             <Row gutter={10}>
               <Col span={24}>
-            <TesteMaisRealizado
+            <CardTesteMaisRealizado
               nomeDoExame={'Autismo'}
               disponiveis={3}
               tipo={'autismo'}
@@ -83,36 +86,29 @@ const Dashboard = () => {
     <ContentContainer>
         <Title level={4}>Atualizações Importantes</Title>
           <Row gutter={10}>
-            <Col span={6}>
+            <Col span={8}>
               <CardsAtualizacoesImportantes
-                nome={'Nome do paciente'}
-                exame={'Teste realizado'}
-                dataRealizado={'2020-05-05'}
+                nome={'Renata Augusto Ferreira'}
+                exame={'TDAH CAB ADHD'}
+                dataRealizado={'20/10/2023'}
                 foto={"./images/foto-renata.png"}
+                completo
               />
             </Col>
-            <Col span={6}>
+            <Col span={8}>
               <CardsAtualizacoesImportantes
-                nome={'Nome do paciente'}
-                exame={'Teste realizado'}
-                dataRealizado={'2020-05-05'}
-                foto={"./images/foto-renata.png"}
+                nome={'Carlos Nobrega Baccio'}
+                exame={'TDAH CAB ADHD'}
+                dataRealizado={'20/10/2023'}
+                foto={"./images/foto-carlos-nobrega.png"}
               />
             </Col>
-            <Col span={6}>
+            <Col span={8}>
               <CardsAtualizacoesImportantes
-                nome={'Nome do paciente'}
-                exame={'Teste realizado'}
-                dataRealizado={'2020-05-05'}
-                foto={"./images/foto-renata.png"}
-              />
-            </Col>
-            <Col span={6}>
-              <CardsAtualizacoesImportantes
-                nome={'Nome do paciente'}
-                exame={'Teste realizado'}
-                dataRealizado={'2020-05-05'}
-                foto={"./images/foto-renata.png"}
+                nome={'Suelton A. Mellis'}
+                exame={'TDAH CAB ADHD'}
+                dataRealizado={'20/10/2023'}
+                foto={"./images/foto-suelton-mellis.png"}
               />
             </Col>
           </Row>
