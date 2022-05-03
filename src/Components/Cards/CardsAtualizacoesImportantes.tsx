@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import { Name, StyledCardsAtualizacoesImportantes, SubTitle, TestComplete } from "./styles";
+import { StyledCardsAtualizacoesImportantes, SubTitle, TestComplete } from "./styles";
 
 interface CardsHistoricoProps {
   nome: string,

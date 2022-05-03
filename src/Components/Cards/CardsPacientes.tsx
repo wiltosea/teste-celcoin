@@ -1,6 +1,4 @@
 import { Icon } from "@iconify/react";
-import { Typography} from 'antd'
-import { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { Indicador, StyledCard } from "./styles";
 

@@ -50,9 +50,6 @@ export const PacientesTable = () => {
     getData()
   }, [q])
 
-
-
-
 return (
   <Container>
     <div className="headerContainer">

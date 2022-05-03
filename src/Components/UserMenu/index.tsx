@@ -29,7 +29,4 @@ export const UserMenu = () => {
       <StyledIcon icon="healthicons:ui-menu-grid" width={26}/>
   </Container>
   );
-};
-
-{/* TODO - colocar badge de notificação no icone abaixo  TODO - Criar menu de contexto vertical ao clicar no item abaixo */}
-      
+};      

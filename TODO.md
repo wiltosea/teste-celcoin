@@ -18,5 +18,4 @@ alinhamento do botão
   - responsivo
 ## Pacientes
 ### Todos os pacientes
-#### Filtro
-construir filtro
+separar barra de pesquisa e opções da tabela, deixar o scroll somente na tabela.
