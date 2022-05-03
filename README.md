@@ -1,6 +1,8 @@
-# Começando com Create React App
- 
-Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
+# Projeto teste para Frontend na Celcoin
+
+Este é um projeto de teste para o Frontend na Celcoin. Foi criado baseando-se do protótipo fornecido pela empresa, afim de avaliar o desempenho do Frontend.
+
+Foi utilizado React 18, Ant Design, Styled-components, Tippy, Axios e Iconify.
  
 ## Instruções Gerais
 Baixar o projeto e rodar o comando yarn ou npm install para instalar todos os pacotes necessários.
