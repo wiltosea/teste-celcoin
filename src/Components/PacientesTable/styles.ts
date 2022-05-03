@@ -130,6 +130,12 @@ export const TdActions = styled.td`
   border-radius: 0 6px 6px 0;
   padding: 0 1rem 0 1rem !important;
   text-align: end;
+
+  /*novo*/
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 96px;
   svg {
     color: #145AD2;
     border: 1px solid var(--gray);

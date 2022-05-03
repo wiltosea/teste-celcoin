@@ -9,8 +9,9 @@ interface ButtonProps {
 
 export const Button = ({href, textTitle, typeButton}:ButtonProps) => {
   return (<>
-        <StyledButton href={href} type={
-        typeButton==='primary'?'primary':'ghost'}>{textTitle}</StyledButton>
+        <StyledButton href={href} type={typeButton==='primary'?'primary':'ghost'}>
+          {textTitle}
+        </StyledButton>
         </>
   )
 }

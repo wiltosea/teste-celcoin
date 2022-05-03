@@ -18,7 +18,14 @@ export const StyledButton: typeof Button = styled(Button)<ButtonProps>`
   padding: 0 20px !important;
   margin-left: 8px;
   align-self: center;
+  border: none;
   &:hover {
     background: linear-gradient(273.35deg, #00A3FF 0%, #0057FF 100%);
+  }
+  &.ant-btn-ghost {
+    background: linear-gradient(93.05deg, #FF00C7 0%, #FF005C 100%);
+    &:hover {
+      background: linear-gradient(273.35deg, #FF00C7 0%, #FF005C 100%);
+  }
   }
 ` as any;

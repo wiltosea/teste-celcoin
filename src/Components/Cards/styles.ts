@@ -7,7 +7,7 @@ export const Container = styled.div`
     position: absolute;
     width: 296px;
     height: 140px;
-    top: 26px;
+    top: 20px;
     left: 40px;
     background: #FFFFFF;
     box-shadow: 0px 8px 26px rgba(71, 87, 122, 0.08);
@@ -47,35 +47,7 @@ export const StyledCard: typeof Card = styled(Card)<CardProps>`
     }
   }
   
-  .tooltip {
-    background: var(--white);
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
-    .multi-line{
-      text-align: left;
-      &:nth-child(2){
-        font-style: normal;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 18px;
-        color: var(--black);
-      }
-      &:nth-child(3){
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 33px;
-        display: flex;
-        align-items: center;
-        color: #1CBF84;
-      }
-    }
-  }
-  .negative {
-    .multi-line{
-      &:nth-child(3){color: red;}
-    }
-  }
-  .ant-card-head {
+    .ant-card-head {
     border-bottom: 0px;
     .ant-card-head-title {
       padding: 0px;
@@ -90,12 +62,15 @@ export const StyledCard: typeof Card = styled(Card)<CardProps>`
 ` as any;
 
 export const Indicador = styled.div`
-  ${(positive) => positive ? 'background: var(--green);' : 'color: var(--red);'};
+  background: var(--green);
   color: var(--white);
   font-size: 10px;
-  padding: 8px 16px;
+  padding: 4px 16px;
   border-radius: 16px;
   font-weight: 700;
+  &.negative {
+    background-color: var(--red);
+  }
 `;
 
 export const StyledCardsHistorico = styled(StyledCard)`

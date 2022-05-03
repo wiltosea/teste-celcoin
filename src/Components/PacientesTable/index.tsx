@@ -85,8 +85,8 @@ return (
                   <span>Testes pendentes</span>
                 </TdTestes>
                 <TdActions>
-                  <span><Icon icon="ant-design:edit-filled" width={16} />
-                  <Button href='/' textTitle='ENVIAR NOVO TESTE' /></span>
+                  <span><Icon icon="ant-design:edit-filled" width={16} /></span>
+                  <Button href='/' typeButton="ghost" textTitle='ENVIAR NOVO TESTE' />
                   <Button href='/' typeButton="primary" textTitle='ALTERAR CADASTRO' />
                 </TdActions>
               </tr>);

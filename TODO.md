@@ -18,4 +18,5 @@ alinhamento do botão
   - responsivo
 ## Pacientes
 ### Todos os pacientes
-separar barra de pesquisa e opções da tabela, deixar o scroll somente na tabela.
+alinhar icon de edição
+alterar botão enviar teste
