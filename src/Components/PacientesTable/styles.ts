@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: var(--white);
-  height: 339px;
-  overflow-y: scroll;
   margin-bottom: 2rem;
   padding: 1rem;
   .headerContainer {
@@ -28,6 +26,10 @@ export const Container = styled.div`
     align-items: center;
     color: rgba(86, 84, 104, 0.6);
     margin: 0;
+  }
+  .scrollable-table{
+    height: 251px;
+    overflow-y: scroll;
   }
   table{
     width: 100%;

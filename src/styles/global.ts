@@ -43,6 +43,63 @@ const GlobalStyle = createGlobalStyle`
         opacity: 0.5;
         z-index: -1;
     }
+    .tippy-box[data-animation=fade][data-state=hidden] {
+	opacity: 0
+}
+
+[data-tippy-root] {
+	max-width: calc(100vw - 10px)
+}
+
+.tippy-box {
+	position: relative;
+	outline: 0;
+	transition-property: transform, visibility, opacity;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    top: 2rem;
+    left: 5rem;
+}
+
+.tippy-arrow {
+	width: 16px;
+	height: 16px;
+	color: #333;
+    display: none;
+}
+
+.tippy-content {
+    position: relative;
+    padding: 5px 9px;
+    z-index: 1;
+    color: var(--black);
+    .title-tooltip{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+    }
+    .value-tooltip{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        color: #1CBF84;
+    }
+}
+.negative{
+    .tippy-content{
+        .value-tooltip{
+            color: var(--red) !important
+        }
+    }   
+}
 
  `
   export default GlobalStyle

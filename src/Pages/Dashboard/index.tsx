@@ -20,16 +20,16 @@ const Dashboard = () => {
         <Title level={4}>Informações gerais</Title>
           <Row gutter={16}>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='26' desc='Pacientes ativos' kpi='+30%' titleToolTip={'Pacientes totais'} valueToolTip='268' />
+              <CardsPacientes icon={"ic:baseline-person-outline"} iconColor='blue' title='26' desc='Pacientes ativos' kpi='+30%' titleToolTip={'Pacientes totais'} valueToolTip='268' />
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='306' desc='Testes realizados' kpi='-10%'titleToolTip={'Testes totais'} valueToolTip='1.265'/>
+              <CardsPacientes icon={"bx:bx-test-tube"} iconColor='blue' title='306' desc='Testes realizados' kpi='-10%' titleToolTip={'Testes totais'} valueToolTip='1.265'/>
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='139' desc='Testes concluídos' kpi='+30%'titleToolTip={'Testes totais concluídos'} valueToolTip='10.550'/>
+              <CardsPacientes icon={"bx:bx-test-tube"} iconColor='green' title='139' desc='Testes concluídos' kpi='+30%'titleToolTip={'Testes totais concluídos'} valueToolTip='10.550'/>
             </Col>
             <Col flex={3}>
-              <CardsPacientes icon={"ic:baseline-person-outline"} title='11' desc='Testes cancelados' kpi='-3%'titleToolTip={'Testes totais cancelados'} valueToolTip='618'/>
+              <CardsPacientes icon={"bx:bx-test-tube"} title='11' desc='Testes cancelados' kpi='-3%'titleToolTip={'Testes totais cancelados'} valueToolTip='618' negative iconColor='red'/>
             </Col>
           </Row>
       </ContentContainer>

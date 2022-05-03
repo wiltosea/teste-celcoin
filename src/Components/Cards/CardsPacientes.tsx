@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react";
-import ReactTooltip from "react-tooltip";
-import { Indicador, StyledCard } from "./styles";
-
+import { Indicador, StyledCard, Container } from "./styles";
+import Tippy from '@tippyjs/react';
 
 interface CardsPacientesProps {
   icon:string, 
@@ -17,23 +16,17 @@ interface CardsPacientesProps {
 export const CardsPacientes = ({icon, title, desc, kpi, iconColor, titleToolTip,valueToolTip, negative }:CardsPacientesProps) => {
   
   return (
-    
-      <StyledCard
-      title={<Icon icon={icon} width={40} color={iconColor}/> }
-      extra={<Indicador>{kpi}</Indicador> }
-      data-tip={`${titleToolTip}<br>${valueToolTip}`}
-      >
-        <p className="card-title">{title}</p>
-        <p className="description">{desc}</p>
-        <ReactTooltip
-          effect="solid"
-          multiline={true}
-          offset={{top: -45, left: -75}}
-          arrowColor={'transparent'}
-          className={`tooltip ${negative ? "negative" : ""}`}
-          />
-      </StyledCard>
-      
+      <Tippy content={<><div className='title-tooltip'>{titleToolTip}</div><div className="value-tooltip">{valueToolTip}</div></>} className={negative?'negative':''}>
+          <Container>
+            <StyledCard
+              title={<Icon icon={icon} width={40} color={iconColor}/> }
+              extra={<Indicador>{kpi}</Indicador> }>
+              <p className="card-title">{title}</p>
+              <p className="description">{desc}</p>
+            </StyledCard>
+            <div className="box"></div>
+        </Container>
+      </Tippy>
   );
   }
 

@@ -2,6 +2,19 @@ import styled from 'styled-components';
 import { Card } from 'antd';
 import { CardProps } from 'antd/lib/card';
 
+export const Container = styled.div`
+  .box{
+    position: absolute;
+    width: 296px;
+    height: 140px;
+    top: 26px;
+    left: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 26px rgba(71, 87, 122, 0.08);
+    border-radius: 6px;
+    z-index: 0;
+  }
+`;
 
 export const StyledCard: typeof Card = styled(Card)<CardProps>`
   /* margin-bottom: 24px; */
@@ -10,8 +23,10 @@ export const StyledCard: typeof Card = styled(Card)<CardProps>`
   background-color: var(--white);
   box-shadow: 0px 8px 26px rgba(71, 87, 122, 0.08);
   transition: box-shadow 0.3s ease-in-out;
+  z-index: 1;
   .ant-card-body {
-  padding: 0 24px;
+    z-index: 1;
+    padding: 0 24px;
     .card-title {
       font-family: 'Poppins';
       font-style: normal;

@@ -56,42 +56,44 @@ return (
       <div className="title"><Title level={5}>Lista de Pacientes ({data.length})</Title><Search onChange={e => setQ(e.target.value)}/></div>
       <Icon icon="carbon:overflow-menu-horizontal" width={45} />
     </div>
-    <table>
-      <tbody>
-        {data.map(({key, nome, foto, diagnostico, testesRealizados, testesCancelados, testePendentes}: dataProps) => {
-          return (
-            <tr key={Math.random()}>
-              <TdCardPaciente>
-                <div className="td-card-paciente-info">
-                  <img src={foto} alt="foto"/>
-                  <div className="td-card-info-details">
-                    <p className="nome-paciente">{nome}</p>
-                    <SubTitle>Diagnóstico</SubTitle>
-                    <p className="diagnostico">{diagnostico}</p>
+    <div className='scrollable-table'>
+      <table>
+        <tbody>
+          {data.map(({key, nome, foto, diagnostico, testesRealizados, testesCancelados, testePendentes}: dataProps) => {
+            return (
+              <tr key={Math.random()}>
+                <TdCardPaciente>
+                  <div className="td-card-paciente-info">
+                    <img src={foto} alt="foto"/>
+                    <div className="td-card-info-details">
+                      <p className="nome-paciente">{nome}</p>
+                      <SubTitle>Diagnóstico</SubTitle>
+                      <p className="diagnostico">{diagnostico}</p>
+                    </div>
                   </div>
-                </div>
-              </TdCardPaciente>
-              <TdTestes className='green'>
-                <p>{testesRealizados}</p>
-                <span>Testes realizados</span>
-              </TdTestes>
-              <TdTestes className='red'>
-                <p>{testesCancelados}</p>
-                <span>Testes cancelados</span>
-              </TdTestes>
-              <TdTestes className='orange'>
-                <p>{testePendentes}</p>
-                <span>Testes pendentes</span>
-              </TdTestes>
-              <TdActions>
-                <span><Icon icon="ant-design:edit-filled" width={16} />
-                <Button href='/' textTitle='ENVIAR NOVO TESTE' /></span>
-                <Button href='/' typeButton="primary" textTitle='ALTERAR CADASTRO' />
-              </TdActions>
-            </tr>);
-        })}
-      </tbody>
-    </table>
+                </TdCardPaciente>
+                <TdTestes className='green'>
+                  <p>{testesRealizados}</p>
+                  <span>Testes realizados</span>
+                </TdTestes>
+                <TdTestes className='red'>
+                  <p>{testesCancelados}</p>
+                  <span>Testes cancelados</span>
+                </TdTestes>
+                <TdTestes className='orange'>
+                  <p>{testePendentes}</p>
+                  <span>Testes pendentes</span>
+                </TdTestes>
+                <TdActions>
+                  <span><Icon icon="ant-design:edit-filled" width={16} />
+                  <Button href='/' textTitle='ENVIAR NOVO TESTE' /></span>
+                  <Button href='/' typeButton="primary" textTitle='ALTERAR CADASTRO' />
+                </TdActions>
+              </tr>);
+          })}
+        </tbody>
+      </table>
+    </div>
   </Container>
   );
 }
