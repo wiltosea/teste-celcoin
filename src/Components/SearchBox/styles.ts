@@ -5,7 +5,7 @@ export const SearchBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  height: 30px;
+  height: 40px;
   padding: 10px;
   width: 400px;
   border-radius: 5px;
@@ -14,5 +14,11 @@ export const SearchBox = styled.div`
   input {
     background-color: #f5f5f5;
     border: none;
+    &:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 0px;
+}
   }
 `;

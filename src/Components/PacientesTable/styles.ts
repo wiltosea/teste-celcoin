@@ -5,6 +5,30 @@ export const Container = styled.div`
   height: 339px;
   overflow-y: scroll;
   margin-bottom: 2rem;
+  padding: 1rem;
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    > svg {
+      cursor: pointer;
+      color: rgba(44, 46, 61, 0.5);
+    }
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  h5{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: rgba(86, 84, 104, 0.6);
+    margin: 0;
+  }
   table{
     width: 100%;
     border-collapse:separate; 

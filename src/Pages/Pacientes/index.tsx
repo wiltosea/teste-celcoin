@@ -1,15 +1,10 @@
 import { PageContainer } from '../../Components/Layout/PageContainer';
 import {ContentContainer} from '../../Components/Layout/ContentContainer';
 import {ContentContainerHistorico} from '../../Components/Layout/ContentContainerHistorico';
-import {ContainerMaisRealizados } from '../../Components/Layout/ContainerMaisRealizados';
-import {Row, Col, Typography, Table } from 'antd'
-import { CardsPacientes } from '../../Components/Cards/CardsPacientes';
+import {Row, Col, Typography } from 'antd'
 import { CardsHistorico } from '../../Components/Cards/CardsHistorico';
-import { CardTesteMaisRealizado } from '../../Components/Cards/CardMaisRealizado';
-import { CardsAtualizacoesImportantes } from '../../Components/Cards/CardsAtualizacoesImportantes';
-import Button from '../../Components/Button';
 import { HeaderContainer } from '../../Components/HeaderContainer';
-import { Icon } from '@iconify/react';
+
 import { PacientesTable } from '../../Components/PacientesTable';
 
 const {Title} = Typography;

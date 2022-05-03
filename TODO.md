@@ -1,27 +1,22 @@
 # A fazer no projeto
 ## Geral
-### Barra Lateral esquerda
-#### Logo
-#### Menu
 
-## Dashboard
-### Barra superior
-#### Campo de pesquisa
-#### Configurações
-#### Notificações
 #### Usuário
 ##### Menu de Usuário
-
-#### Menu geral
+precisa de ajustes
 
 ## Frame principal
-### Título
 ### Cards kpi
-### Cards Histórico
-### Cards mais realizado
-### Cards Importantes
+reduzir o tamanho do percentual e deixar vermelho quando o número for negativo
 
+### Cards Histórico
+alinhamento do botão
+
+### Cards mais realizado
+- ellipsis no titulo responsivo
+### Cards Atualizações Importantes
+  - responsivo
 ## Pacientes
 ### Todos os pacientes
 #### Filtro
-#### Menu
+construir filtro
